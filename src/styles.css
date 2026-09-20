@@ -83,7 +83,7 @@ h1 {
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   margin-bottom: 18px;
 }
@@ -105,6 +105,15 @@ h1 {
   display: block;
   margin-top: 8px;
   font-size: 30px;
+}
+
+.metric-danger {
+  border-color: #e4b1a5;
+  background: #fdf3f1;
+}
+
+.metric-danger strong {
+  color: #c84b31;
 }
 
 .workspace {
@@ -194,6 +203,10 @@ textarea {
   white-space: nowrap;
 }
 
+.status-pending { background: #eef1f6; color: #5b667a; }
+.status-ok { background: #e8f4ef; color: #14724f; }
+.status-bad { background: #fbe9e4; color: #c84b31; }
+
 .details {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -249,6 +262,81 @@ textarea {
   text-align: center;
   color: #69758c;
   padding: 32px 12px;
+}
+
+.lock-hint {
+  margin: 0 0 12px;
+  background: #fff7e8;
+  border: 1px solid #f0d9a8;
+  color: #8a5a00;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.form-grid .lock-hint { margin: 0; }
+
+.form-error {
+  margin: 0;
+  color: #c84b31;
+  font-size: 13px;
+}
+
+.rect-panel {
+  border: 1px dashed #e4b1a5;
+  background: #fff8f6;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 0 0 12px;
+}
+
+.rect-details { margin: 0 0 10px; }
+
+.progress {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.step {
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  background: #eef1f6;
+  color: #69758c;
+}
+
+.step-active {
+  background: #176b87;
+  color: #fff;
+}
+
+.overdue {
+  margin: 10px 0 0;
+  color: #c84b31;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.resolution {
+  margin: 10px 0 0;
+  color: #14724f;
+  font-size: 13px;
+}
+
+.inline-form {
+  display: grid;
+  gap: 10px;
+  border: 1px solid #dfe7f1;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 0 0 12px;
+  background: #fff;
+}
+
+@media (max-width: 1100px) {
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 860px) {
